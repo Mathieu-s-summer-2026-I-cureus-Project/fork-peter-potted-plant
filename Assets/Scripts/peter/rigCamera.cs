@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Mathieu's code for camera rigging, this script is attached to the camera and follows the player with a vertical offset and adjusts the orthographic size based on the player's health.
 public class rigCamera : MonoBehaviour
 {
 
