@@ -829983,6 +829983,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1401167859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4735806198284112456, guid: dce9dd0b76504f84f9ff179e25add041, type: 3}
+  m_PrefabInstance: {fileID: 1943051829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1403227967
 GameObject:
   m_ObjectHideFlags: 0
@@ -831691,6 +831696,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 475852391294921827, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
   m_PrefabInstance: {fileID: 4471461096316033616}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1665440915 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 608170630791958027, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
+  m_PrefabInstance: {fileID: 4471461096316033616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1667900216
 GameObject:
   m_ObjectHideFlags: 0
@@ -833003,6 +833013,17 @@ Transform:
   - {fileID: 1474818750}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1785389784 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3221881474388363829, guid: dce9dd0b76504f84f9ff179e25add041, type: 3}
+  m_PrefabInstance: {fileID: 1943051829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b27beeb30133a48a5ed232bd336b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1792408659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6462400973861168477, guid: f537dceede17f53499d589af8f1d8a6f, type: 3}
@@ -846032,6 +846053,18 @@ PrefabInstance:
       propertyPath: menuList
       value: 
       objectReference: {fileID: 612262930}
+    - target: {fileID: 6575170644088654347, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1401167859}
+    - target: {fileID: 6575170644088654347, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1665440915}
+    - target: {fileID: 6575170644088654347, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
+      propertyPath: PlayerState
+      value: 
+      objectReference: {fileID: 1785389784}
     - target: {fileID: 8017091183451573891, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
       propertyPath: m_Enabled
       value: 0
