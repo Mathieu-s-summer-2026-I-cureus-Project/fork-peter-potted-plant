@@ -3,11 +3,11 @@ using UnityEngine;
 public class rigCamera : MonoBehaviour
 {
 
-    GameObject player;
+    public GameObject player;
     Vector3 playerPosition;
-    playerStateManager PlayerState;
+    public playerStateManager PlayerState;
 
-    Camera mainCamera;
+    public Camera mainCamera;
     public float verticalOffset = -15.0f;
     float cameraDistance = 12.0f;
     
@@ -31,20 +31,15 @@ public class rigCamera : MonoBehaviour
 
     void assignObjects()
     {
-        mainCamera = Camera.main;
-        if (mainCamera == null)
-        {
-            Debug.LogError("Main Camera not found in the scene.");
-        }
-        player = GameObject.Find("peterHead");
-        if (player == null)
-        {
-            Debug.LogError("Player GameObject not found. Please ensure there is a GameObject named 'peterHead' in the scene.");
-        }
-        PlayerState = GameObject.Find("Player").GetComponent<playerStateManager>();
+        if (mainCamera == null) Debug.LogError("Main Camera not found in the scene.");
+            if (mainCamera == null) mainCamera = Camera.main;
+        if (player == null) Debug.LogError("Player GameObject not found. Please ensure there is a GameObject named 'peterHead' in the scene.");
+            if (player == null) player = GameObject.Find("peterHead");
+        
         if (PlayerState == null)
         {
             Debug.LogError("playerStateManager script not found on 'peterHead' GameObject.");
+            PlayerState = GameObject.Find("Player").GetComponent<playerStateManager>();
         }
 
     }
