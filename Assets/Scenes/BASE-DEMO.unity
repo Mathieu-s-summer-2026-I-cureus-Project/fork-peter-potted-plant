@@ -831691,16 +831691,6 @@ Transform:
   - {fileID: 472528613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1665440909 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 475852391294921827, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
-  m_PrefabInstance: {fileID: 4471461096316033616}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &1665440915 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 608170630791958027, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
-  m_PrefabInstance: {fileID: 4471461096316033616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1667900216
 GameObject:
   m_ObjectHideFlags: 0
@@ -833008,7 +832998,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1665440909}
   - {fileID: 1024261541}
   - {fileID: 1474818750}
   m_Father: {fileID: 0}
@@ -845987,19 +845976,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1782910954}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 475852391294921827, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7604406
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 475852391294921827, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.160574
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 475852391294921827, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.082647
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 475852391294921827, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -846058,10 +846047,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1401167859}
     - target: {fileID: 6575170644088654347, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 1665440915}
-    - target: {fileID: 6575170644088654347, guid: 1a3e2c8f4c243434d8cb32acbba68f1e, type: 3}
       propertyPath: PlayerState
       value: 
       objectReference: {fileID: 1785389784}
@@ -846102,6 +846087,7 @@ SceneRoots:
   - {fileID: 1993818220}
   - {fileID: 529075656}
   - {fileID: 175277064}
+  - {fileID: 4471461096316033616}
   - {fileID: 1782910954}
   - {fileID: 612262929}
   - {fileID: 979439811}
