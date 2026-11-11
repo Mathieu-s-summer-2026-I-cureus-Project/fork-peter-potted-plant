@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
 
 public class playerStateManager : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class playerStateManager : MonoBehaviour
 
     public float arduinoWaterLevel = 0.0f;
     public int waterDropletLevel = 0;
+
+    public float kazooValue = 0.0f;
+    public float kazooValueSmoothed = 0.0f;
+
+    public float beltValue = 0.0f;
 
     GameObject peterHead;
     public Vector3 headPosition;
@@ -86,5 +92,18 @@ public class playerStateManager : MonoBehaviour
             peterRenderer.flipX = true;
             peterAnimator.speed = 1 * Math.Abs(displacementSpeed) * Time.deltaTime;
         }
+    }
+
+    // Starts a short revive pulse: sets `isReviving` true for `duration` seconds.
+    public void StartRevivePulse(float duration = 0.25f)
+    {
+        StartCoroutine(RevivePulse(duration));
+    }
+
+    public IEnumerator RevivePulse(float duration)
+    {
+        isReviving = true;
+        yield return new WaitForSeconds(duration);
+        isReviving = false;
     }
 }

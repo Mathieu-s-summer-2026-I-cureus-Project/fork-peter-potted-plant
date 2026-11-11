@@ -15,10 +15,6 @@ public class groundTrigger : MonoBehaviour
     {
         SR= GetComponent<SpriteRenderer>();
         targetTilemapCollider= targetGround.GetComponent<CompositeCollider2D>();
-        Debug.Log("Enabled ground collider" + targetTilemapCollider.name);
-        //targetTilemapCollider.enabled = true;
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

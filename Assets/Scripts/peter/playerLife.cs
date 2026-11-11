@@ -4,9 +4,12 @@ using UnityEngine.SceneManagement;
 public class playerLife : MonoBehaviour
 {
     Rigidbody2D rb;
+    public playerStateManager PlayerState;
+
 
     //for initializing Sound Effects
     AudioManager audioManager;
+    InputSystem_Actions inputActions;
     private void Awake()
     {
         //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -15,6 +18,13 @@ public class playerLife : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        inputActions = new InputSystem_Actions();
+        inputActions.Player.Restart.Enable();
+        PlayerState = GetComponentInParent<playerStateManager>();
+        if (PlayerState == null)
+        {
+            Debug.LogError("playerStateManager script not found on 'PlayerState' parent.");
+        }
         rb=GetComponent<Rigidbody2D>();
     }
 
@@ -47,5 +57,12 @@ public class playerLife : MonoBehaviour
     private void Restart()//Reload the scene. This could be invoked in animation frames.
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void killPlayer()//Called when player is dead
+    {
+            PlayerState.isDowned = true;
+            PlayerState.isHeavy = false;
+            PlayerState.health = 0.0f;
     }
 }
